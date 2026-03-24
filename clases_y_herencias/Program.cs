@@ -1,0 +1,32 @@
+﻿/*
+var cuadr = new cuadrangulo();
+cuadr.Base = 20;
+cuadr.Altura = 40;
+Console.WriteLine($"El área es: {cuadr.Area()}");
+
+Console.WriteLine($"El Perímetro es: {cuadr.Perimetro()}");
+*/
+var cuadr = new Cuadrado();
+cuadr.Base = 20;
+cuadr.Altura = 40;
+Console.WriteLine($"El área es: {cuadr.Area()}");
+
+Console.WriteLine($"El Perímetro es: {cuadr.Perimetro()}");
+Console.WriteLine($"El Lado es: {cuadr.Lado}");
+class cuadrangulo
+{
+    public double Base { get; set; }
+    public double Altura { get; set; }
+    public double Area() => Base * Altura;
+    public double Perimetro() => 2 * Base + 2 * Altura;
+}
+
+class Cuadrado : cuadrangulo
+{
+    public double Lado
+    {
+        set {Base=value; Altura = value;}
+        get {return Base;}
+    }
+}
+
